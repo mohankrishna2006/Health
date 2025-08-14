@@ -3,9 +3,12 @@ import { Outlet } from "react-router-dom";
 
 export default function Layout() {
   return (
-    <div>
+    <div className="min-h-screen">
       <Navbar />
-      <Outlet />
+      {/* Add padding-top to account for fixed navbar */}
+      <main className="pt-20">
+        <Outlet />
+      </main>
       {/* Add your footer here if needed */}
     </div>
   );
